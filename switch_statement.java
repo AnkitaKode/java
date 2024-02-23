@@ -4,6 +4,7 @@ class switch_statement {
         String result = "";
 
         result = switch (day) {
+
             case "Monday":
                 yield "6am";
             case "Tuesday", "Wednesday":
@@ -14,13 +15,14 @@ class switch_statement {
         };
         System.out.println(result);
 
-        // switch (day) {
-        // case "Monday" -> result = "6am";
-        // case "Tuesday", "Wednesday" -> result = "7am";
-        // default -> result = "5am";
-
-        // }
-        // System.out.println(result);
+        /*
+         * switch (day) {
+         * case "Monday" -> result = "6am";
+         * case "Tuesday", "Wednesday" -> result = "7am";
+         * default -> result = "5am"
+         * }
+         * System.out.println(result);
+         */
 
         /*
          * switch (day) {
