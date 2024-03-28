@@ -23,7 +23,7 @@ class human {
 
 }
 
-public class n {
+public class thisword {
     public static void main(String[] args) {
         human obj = new human();
         obj.setage(19, obj);
