@@ -15,7 +15,7 @@ class human {
     }
 }
 
-public class Encapsulation {
+public class encapsulation {
     public static void main(String[] args) {
         human obj = new human();
         obj.setage(19);
@@ -26,3 +26,4 @@ public class Encapsulation {
         System.out.println(obj.getname() + ":" + obj.getage());
     }
 }
+
