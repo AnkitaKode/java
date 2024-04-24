@@ -71,12 +71,12 @@ public class Stack {
         stack.push(5);
         stack.display();
 
-        System.out.println("\nTop element of the stack: " + stack.peek());
-        System.out.println("\nRemove two element from the stack:");
+        System.out.println("Top element of the stack: " + stack.peek());
+        System.out.println("Remove two element from the stack:");
         stack.pop();
         stack.pop();
         stack.display();
-        System.out.println("\nTop element of the stack after popping: " + stack.peek());
-        System.out.println("\nIs the stack empty? " + stack.isEmpty());
+        System.out.println("Top element of the stack after popping: " + stack.peek());
+        System.out.println("Is the stack empty? " + stack.isEmpty());
     }
 }
