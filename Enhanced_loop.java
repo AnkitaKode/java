@@ -16,7 +16,7 @@ public class Enhanced_loop {
         s2.name = "Harry";
         s2.rollno = 4;
         s2.marks = 89;
-
+     
         student students[] = new student[2];
         students[0] = s1;
         students[1] = s2;
