@@ -5,7 +5,7 @@ public class stringBuffer {
 
         System.out.println(sb.capacity());
         System.out.println(sb.length());
-        
+
         sb.append(" Kumari");
         System.out.println(sb);
 
@@ -13,6 +13,10 @@ public class stringBuffer {
         System.out.println(sb);
 
         sb.setLength(20);
+
+        sb.reverse();
+        System.out.println(sb.toString());
+
         System.out.println(sb.length());
     }
 }
