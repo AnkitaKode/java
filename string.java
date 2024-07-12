@@ -16,5 +16,8 @@ public class string {
         String name2 = "Ankita";
         System.out.println(name == name2);
 
+        System.out.println(name.toUpperCase());
+        System.out.println(name.toLowerCase());
+
     }
 }
