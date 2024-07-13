@@ -1,20 +1,17 @@
-class Outer {
+class OuterClass {
+    int x = 10;
 
-    class Inner {
-
-        public void show() {
-
-            System.out.println("In a nested class method");
-        }
+    class InnerClass {
+        int y = 5;
     }
 }
 
 public class InnerClass {
-
     public static void main(String[] args) {
 
-        Outer.Inner in = new Outer().new Inner();
+        OuterClass myOuter = new OuterClass();
+        OuterClass.InnerClass myInner = myOuter.new InnerClass();
 
-        in.show();
+        System.out.println(myInner.y + myOuter.x);
     }
 }
