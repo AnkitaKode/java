@@ -3,7 +3,6 @@ public class array {
 
         int num[][] = new int[4][7];
 
-
         //For Random values
         for (int i = 0; i <= 3; i++) {
             for (int j = 0; j <= 6; j++) {
