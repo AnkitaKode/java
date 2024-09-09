@@ -12,6 +12,7 @@ public class InputHandler {
             long c = sc.nextLong();
             byte d = sc.nextByte();
             sc.nextLine();
+            
             String s = sc.nextLine();
 
             System.out.println("Enter Integer: " + a);
