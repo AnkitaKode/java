@@ -21,6 +21,7 @@ public class InputHandler {
             System.out.println("Enter Byte: " + d);
             System.out.println("Enter String: " + s);
         }
+        
 
         sc.close();
     }
