@@ -9,7 +9,7 @@ class A {
 public class AccessModifier {
     public static void main(String args[]) {
         A obj = new A();
-        System.out.println(obj.data);// Compile Time Error
-        obj.msg(); // Compile Time Error
+        System.out.println(obj.data);//Compile Time Error
+        obj.msg(); //Compile Time Error
     }
 }
