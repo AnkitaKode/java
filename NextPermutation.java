@@ -1,8 +1,8 @@
-public class nextPermutation {
+public class NextPermutation {
     public static void main(String[] args) {
-        int[] arr = {1, 2, 3};
-        
-        nextPermutation solution = new nextPermutation();
+        int[] arr = { 1, 2, 3 };
+
+        NextPermutation solution = new NextPermutation();
         solution.nextPermutation(arr);
 
         System.out.print("Next Permutation: ");
@@ -24,7 +24,6 @@ public class nextPermutation {
             while (arr[j] <= arr[i]) {
                 j--;
             }
-            // Swap using a temporary variable for clarity
             int temp = arr[i];
             arr[i] = arr[j];
             arr[j] = temp;
@@ -35,7 +34,6 @@ public class nextPermutation {
 
     private void reverse(int[] arr, int start, int end) {
         while (start < end) {
-            // Swap using a temporary variable for clarity
             int temp = arr[start];
             arr[start] = arr[end];
             arr[end] = temp;
