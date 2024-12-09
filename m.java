@@ -2,25 +2,21 @@
 
     
     public static int linearSearch(int[] arr, int target) {
-        // Traverse the array
+       
         for (int i = 0; i < arr.length; i++) {
-            // Check if the current element matches the target
             if (arr[i] == target) {
-                return i; // Return the index of the target
+                return i; 
             }
         }
-        return -1; // Return -1 if the target is not found
+        return -1; 
     }
 
-    // Main method
     public static void main(String[] args) {
-        int[] numbers = { 10, 20, 30, 40, 50 };
-        int target = 33;
+        int[] numbers = { 10, 20, 30, 90, 50 };
+        int target = 30;
 
-        // Perform linear search
         int result = linearSearch(numbers, target);
 
-        // Print the result
         if (result != -1) {
             System.out.println("Element " + target + " found at index: " + result);
         } else {
