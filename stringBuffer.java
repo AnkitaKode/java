@@ -9,7 +9,7 @@ public class stringBuffer {
         sb.append(" Kumari");
         System.out.println(sb);
 
-        sb.insert(10, " Sinha");
+        sb.insert(10, " Sharma");
         System.out.println(sb);
 
         sb.setLength(20);
