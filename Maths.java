@@ -1,4 +1,5 @@
 public class Maths {
+    
     public static void main(String[] args) {
         double x = 28;
         double y = 4;
