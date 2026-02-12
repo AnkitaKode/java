@@ -1,127 +1,173 @@
 class LinkedList {
-    Node head;  
+    Node head;
+
+    // Node class
+    class Node {
+        int data;
+        Node next;
+
+        Node(int data) {
+            this.data = data;
+            this.next = null;
+        }
+    }
 
     // Insert at Beginning
     public void insertAtBeginning(int data) {
         Node newNode = new Node(data);
-        newNode.next = head; // arrow of new node → old head
-        head = newNode;      // new node becomes head
+        newNode.next = head;
+        head = newNode;
     }
 
     // Insert at End
     public void insertAtEnd(int data) {
         Node newNode = new Node(data);
-        if (head == null) { // if list empty
+
+        if (head == null) {
             head = newNode;
             return;
         }
-        Node temp = head;
-        while (temp.next != null) { // walk till last
-            temp = temp.next;
+
+        Node curr = head;
+        while (curr.next != null) {
+            curr = curr.next;
         }
-        temp.next = newNode; // last node’s arrow → new node
+
+        curr.next = newNode;
     }
 
-    //Insert at Specific Position (1-based index)
+    // Insert at Position (1-based index)
     public void insertAtPosition(int data, int position) {
+
         if (position == 1) {
             insertAtBeginning(data);
             return;
         }
+
         Node newNode = new Node(data);
-        Node temp = head;
-        for (int i = 1; i < position - 1 && temp != null; i++) {
-            temp = temp.next;
+        Node curr = head;
+
+        for (int i = 1; i < position - 1 && curr != null; i++) {
+            curr = curr.next;
         }
-        if (temp == null) {
+
+        if (curr == null) {
             System.out.println("Position out of range");
             return;
         }
-        newNode.next = temp.next;
-        temp.next = newNode;
+        // this is the only line that is different from insertAtEnd, we are inserting
+        // the new node in between two nodes, so we need to update the next pointer of
+        // the new node to point to the next node of the current node, and then update
+        // the next pointer of the current node to point to the new node.
+        newNode.next = curr.next;
+        curr.next = newNode;
     }
 
-    // Delete at Beginning
+    // Delete Beginning
     public void deleteAtBeginning() {
-        if (head == null) return;
-        head = head.next; // skip the first node
+        if (head == null)
+            return;
+        head = head.next;
     }
 
-    // Delete at End
+    // Delete End
     public void deleteAtEnd() {
-        if (head == null) return;
-        if (head.next == null) { // only one node
+
+        if (head == null)
+            return;
+
+        if (head.next == null) {
             head = null;
             return;
         }
-        Node temp = head;
-        while (temp.next.next != null) { // reach 2nd last node
-            temp = temp.next;
+
+        Node curr = head;
+
+        while (curr.next.next != null) {
+            curr = curr.next;
         }
-        temp.next = null; // cut the last node
+
+        curr.next = null;
     }
 
-    // Delete at Specific Position
+    // Delete at Position
     public void deleteAtPosition(int position) {
-        if (head == null) return;
+
+        if (head == null)
+            return;
+
         if (position == 1) {
             head = head.next;
             return;
         }
-        Node temp = head;
-        for (int i = 1; i < position - 1 && temp != null; i++) {
-            temp = temp.next;
+
+        Node curr = head;
+
+        for (int i = 1; i < position - 1 && curr != null; i++) {
+            curr = curr.next;
         }
-        if (temp == null || temp.next == null) return;
-        temp.next = temp.next.next; // skip the node
+
+        if (curr == null || curr.next == null)
+            return;
+
+        curr.next = curr.next.next;
     }
 
-    //Search for an Element
+    // Search Element
     public boolean search(int key) {
-        Node temp = head;
-        while (temp != null) {
-            if (temp.data == key) return true;
-            temp = temp.next;
+
+        Node curr = head;
+
+        while (curr != null) {
+            if (curr.data == key)
+                return true;
+            curr = curr.next;
         }
+
         return false;
     }
 
     // Display List
     public void display() {
-        Node temp = head;
-        while (temp != null) {
-            System.out.print(temp.data + " → ");
-            temp = temp.next;
+
+        Node curr = head;
+
+        while (curr != null) {
+            System.out.print(curr.data + " -> ");
+            curr = curr.next;
         }
+
         System.out.println("null");
     }
 }
 
 public class listLinked {
+
     public static void main(String[] args) {
+
         LinkedList list = new LinkedList();
 
         list.insertAtEnd(10);
         list.insertAtEnd(20);
         list.insertAtEnd(30);
-        list.display(); // 10 → 20 → 30 → null
+        list.display();
 
         list.insertAtBeginning(5);
-        list.display(); // 5 → 10 → 20 → 30 → null
+        list.display();
 
         list.insertAtPosition(15, 3);
-        list.display(); // 5 → 10 → 15 → 20 → 30 → null
+        list.display();
 
         list.deleteAtBeginning();
-        list.display(); // 10 → 15 → 20 → 30 → null
+        list.display();
 
         list.deleteAtEnd();
-        list.display(); // 10 → 15 → 20 → null
+        list.display();
 
         list.deleteAtPosition(2);
-        list.display(); // 10 → 20 → null
+        list.display();
 
-        System.out.println("Search 20: " + list.search(20)); // true
-        System.out.println("Search 50: " + list.search(50)); // false
+        System.out.println("Search 20: " + list.search(20));
+        System.out.println("Search 50: " + list.search(50));
     }
 }
