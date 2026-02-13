@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 
+
+// Bellman-Ford Algorithm is used to find the shortest path from a source vertex to all other vertices in a graph, even if the graph contains negative weight edges. It can also detect negative weight cycles in the graph. The algorithm works by relaxing all edges repeatedly for V-1 times, where V is the number of vertices in the graph. If we can still relax any edge after V-1 iterations, it means there is a negative weight cycle in the graph.
 public class BellamanFordAlgo {
 
     static class Edge {
@@ -33,14 +35,12 @@ public class BellamanFordAlgo {
     }
 
     public static void bellamanFord(ArrayList<Edge> graph[], int src, int V) {
-
         int dist[] = new int[V];
 
         // Step 1: Initialize distances
         for (int i = 0; i < V; i++) {
             dist[i] = Integer.MAX_VALUE;
         }
-
         dist[src] = 0;
 
         // Step 2: Relax edges V-1 times
