@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.Queue;
 import java.util.LinkedList;
 
+//Level order traversal using Queue. O(V + E)
 public  class BFS {
 
     public ArrayList<Integer> bfsOfGraph(int V, ArrayList<ArrayList<Integer>> adj) {
@@ -10,14 +11,14 @@ public  class BFS {
 
         boolean visited[] = new boolean[V];
         Queue<Integer> q = new LinkedList<Integer>();
-        q.add(0);
 
+        q.add(0);
         visited[0] = true;
         
         while (!q.isEmpty()) {
-            int node = q.poll();
-            result.add(node);
-            for (int neighbor : adj.get(node)) {
+            int curr = q.poll();
+            result.add(curr);
+            for (int neighbor : adj.get(curr)) {
                 if (!visited[neighbor]) {
                     visited[neighbor] = true;
                     q.add(neighbor);
