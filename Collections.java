@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 public class Collections {
@@ -20,7 +19,6 @@ public class Collections {
 
         System.out.println(nums.get(1));
         System.out.println(nums.indexOf(2));
-
-
+        
     }
 }
