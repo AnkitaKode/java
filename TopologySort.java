@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Stack;
 
+//DAG
 public class TopologySort {
 
     static class Edge {
@@ -26,8 +27,7 @@ public class TopologySort {
 
     }
 
-    static void topSortUtil(ArrayList<Edge>[] graph, int curr,
-            boolean[] vis, Stack<Integer> stack) {
+    static void topSortUtil(ArrayList<Edge>[] graph, int curr, boolean[] vis, Stack<Integer> stack) {
 
         vis[curr] = true;
 
