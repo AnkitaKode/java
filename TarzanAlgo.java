@@ -11,7 +11,7 @@ public class TarzanAlgo {
             src = u;
             dest = v;
         }
-    } 
+    }
 
     public static void createGraph(ArrayList<Edge>[] graph) {
 
