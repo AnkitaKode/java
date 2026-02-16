@@ -81,7 +81,7 @@ public class TarzanAlgo {
 
     public static void main(String[] args) {
 
-        int v = 5;
+        int v = 6;
 
         ArrayList<Edge>[] graph = new ArrayList[v];
         createGraph(graph);
