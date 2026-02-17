@@ -15,7 +15,7 @@ class Computer {
         my.computer_method();
         your.laptop_method();
     }
-} 
+}
 
 class Laptop {
     Laptop() {
