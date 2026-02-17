@@ -5,4 +5,4 @@ class Concat{
       System.out.println(s);
     }  
     
-} 
+}
