@@ -10,7 +10,7 @@ class human {
     public human() { // Default Constructor
         age = 32;
         name = "Damon";
-    }
+    } 
 
     public human(int age, String name) { // Paramaterised Constructor
         this.age = age;
